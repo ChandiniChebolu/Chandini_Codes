@@ -1,0 +1,16 @@
+function sortDescending(arr) {
+    for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] < arr[j]) {
+                let temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr;
+}
+
+let input = prompt("Enter comma-separated numbers:");
+let arr = input.split(",").map(Number);
+console.log(sortDescending(arr));
